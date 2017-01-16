@@ -1,22 +1,23 @@
-package com.epam.jmp;
+package com.fooddelivery.model;
 
-/**
- * Created by Tomasz_Kozlowski on 1/9/2017.
- */
+import com.fooddelivery.service.Menu;
+
 public class Restaurant {
     private int id;
     private String name;
     private Type type;
-    private Location location;
+    private String location;
     private Menu menu;
 
-    public Restaurant(int id, String name, Type type, Location location, Menu menu) {
+    public Restaurant(int id, String name, Type type, String location, Menu menu) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.location = location;
         this.menu = menu;
     }
+    
+    public Restaurant(){}
 
     public Type getType() {
         return type;
@@ -30,7 +31,7 @@ public class Restaurant {
         return name;
     }
 
-    public Location getLocation() {
+    public String getLocation() {
         return location;
     }
 

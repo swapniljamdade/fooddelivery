@@ -1,4 +1,4 @@
-package com.epam.jmp;
+package com.fooddelivery.service;
 
 /**
  * Created by Tomasz_Kozlowski on 1/12/2017.

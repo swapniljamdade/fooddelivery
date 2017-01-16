@@ -1,4 +1,4 @@
-package com.epam.jmp;
+package com.fooddelivery.service;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
@@ -14,7 +14,6 @@ public class Order {
     private int restaurantId;
     private Map<Item, Integer> items;
     private boolean isActive;
-    private Location location;
     private String totalPrice;
     private DecimalFormat df = new DecimalFormat("#.##");
 
@@ -57,13 +56,5 @@ public class Order {
 
     public void cancel() {
         isActive = false;
-    }
-
-    public Location locate() {
-        return new Location(location);
-    }
-
-    public void updateLocation(Location location) {
-        this.location.update(location.getX(), location.getY());
     }
 }

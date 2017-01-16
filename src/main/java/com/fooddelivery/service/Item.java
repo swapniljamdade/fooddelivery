@@ -1,4 +1,4 @@
-package com.epam.jmp;
+package com.fooddelivery.service;
 
 import com.google.common.base.Objects;
 
