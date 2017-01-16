@@ -1,0 +1,26 @@
+group 'com.epam.jmp'
+version '1.0-SNAPSHOT'
+
+buildscript {
+	ext {
+		springBootVersion = '1.4.0.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+sourceCompatibility = 1.8
+
+dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-parent:1.0.0.RELEASE')
+	compile('org.springframework.cloud:spring-cloud-starter-eureka-server:1.0.0.RELEASE')
+}
+
+configurations {
+    provided.all*.exclude group: 'javax.servlet'
+}
+
