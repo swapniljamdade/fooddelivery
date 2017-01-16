@@ -2,6 +2,9 @@ package com.epam.jmp;
 
 import org.junit.Test;
 
+import com.fooddelivery.service.Item;
+import com.fooddelivery.service.Order;
+
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
