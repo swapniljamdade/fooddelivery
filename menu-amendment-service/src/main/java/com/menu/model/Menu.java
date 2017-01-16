@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Tomasz_Kozlowski on 1/9/2017.
  */
+@Component
 public class Menu {
     private List<Item> items = new LinkedList<>();
+    
+    public Menu(){}
 
     public void add(Item item) throws MenuException {
         if (items.contains(item)) throw new MenuException("Item already exists in Menu: " + item);

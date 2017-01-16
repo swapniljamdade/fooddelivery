@@ -5,9 +5,12 @@ import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 /**
  * Created by Tomasz_Kozlowski on 1/12/2017.
  */
+@Component
 public class Order {
     private int userId;
     private int id;
@@ -26,6 +29,8 @@ public class Order {
         totalPrice = "0.0";
         df.setRoundingMode(RoundingMode.CEILING);
     }
+    
+    public Order(){}
 
     public void addItem(Item item) {
         if(!items.containsKey(item)) items.put(item, 1);

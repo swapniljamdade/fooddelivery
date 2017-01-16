@@ -2,11 +2,10 @@ spring:
   application:
     name: config-service
   cloud:
-     config:
-        uri: ${vcap.services.cconfig-service.credentials.uri:http://127.0.0.1:8888}
-        server:
-            git:
-              uri: https://github.com/swapniljamdade/properties.git
+    config:
+      server:
+        git:
+          uri: https://github.com/swapniljamdade/properties.git
           
 server:
   port: 8888

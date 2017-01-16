@@ -1,13 +1,10 @@
 spring:
   application:
     name: menu-amendment-service
-  cloud:
-    config:
-      uri: ${vcap.services.configuration-service.credentials.uri:http://127.0.0.1:8888}
+    cloud:
+      config:
+        uri: http://localhost:8888
       
-server:
-   port: 8803
-   
 eureka:
   instance:
      preferIpAddress: true
